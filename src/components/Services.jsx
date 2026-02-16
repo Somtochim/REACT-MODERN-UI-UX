@@ -8,7 +8,7 @@ import { PhotoChatMessage, Gradient, VideoBar, VideoChatMessage } from "./design
 const Services = () => {
   return (
     <Section id="how-to-use">
-        <div className="container"> 
+        <div className="container">
             <Heading 
             title="Generative AI made for creators."
             text="Brainwave unlocks the potential of AI-powered applications"/>
@@ -77,5 +77,4 @@ const Services = () => {
     </Section>
   ) 
 }
-
 export default Services
