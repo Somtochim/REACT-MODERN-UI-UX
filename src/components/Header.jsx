@@ -5,26 +5,26 @@ import {brainwave} from "../assets"
 import {navigation} from "../constants"
 import Button from './Button'
 import MenuSvg from '../assets/svg/MenuSvg'
- import { HamburgerMenu } from "./design/Header"
+import { HamburgerMenu } from "./design/Header"
 
 export const Header = () => {
-  const pathname = useLocation();
-  const [openNavigation, setopenNavigation] = useState(false);
+  const location = useLocation();
+  const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
     if (openNavigation) {
-      setopenNavigation(false);
+      setOpenNavigation(false);
       enablePageScroll();
     } else {
-      setopenNavigation(true);
+      setOpenNavigation(true);
       disablePageScroll();
     }
   };
 
-  const handleClick = () =>{
+  const handleClick = () => {
     if (!openNavigation) return;
     enablePageScroll();
-    setopenNavigation(false);
+    setOpenNavigation(false);
   }
 
   return (
@@ -43,7 +43,7 @@ export const Header = () => {
             key={item.id} 
             href={item.url}
             onClick={handleClick}
-            className={`block relative font-code text-2xl uppercase transition-colors hover:text-color-1 ${item.onlyMobile ? 'lg:hidden' : ""} px-6 py-6 md:py-8 lg:mr-1 lg:font-semibold ${item.url === pathname.hash ? 'z-20 lg:text-n-1' : "text-n-1 lg:text-n-1/50"} lg:leading-5 xl:px-12`}>
+            className={`block relative font-code text-2xl uppercase transition-colors hover:text-color-1 ${item.onlyMobile ? 'lg:hidden' : ""} px-6 py-6 md:py-8 lg:mr-1 lg:font-semibold ${item.url === location.hash ? 'z-20 lg:text-n-1' : "text-n-1 lg:text-n-1/50"} lg:leading-5 xl:px-12`}>
               {item.title}
             </a>
           ))}
