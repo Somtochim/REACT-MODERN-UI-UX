@@ -1,6 +1,6 @@
 import Heading from "./Heading"
 import Section from "./Section"
-import { roadmap } from "../constants/index"
+import { roadmap } from "../constants"
 
 const Roadmap = () => {
   return (

@@ -1,4 +1,4 @@
-import { pricing } from "../constants/index"
+import { pricing } from "../constants"
 import Button from "../components/Button"
 import { check } from "../assets"
 
